@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Wave Simulator</title>
+</head>
+<body>
+    <div>
+        <input type="button" value="Pause" id="pause_btn" onclick="pause_anime()">
+        <input type="button" value="Start" id="start_btn" onclick="start_anime()">
+        <input type="button" value="Reset" id="reset_btn" onclick="reset_anime()">
+
+        <label for="waves">wave form</label>
+        <select name="waves" id="waves" onchange="wave_select()">
+            <option value="none">none</option>
+            <option value="Longitudanal">Longitudanal</option>
+            <option value="Latitiude">Latitiude</option>
+            <option value="Surface">Surface</option>
+        </select>
+    </div>
+    <canvas id="wave"></canvas>
+    <div>
+        <label for="particle">Particle Shape</label>
+        <select name="particle" id="particle">
+            <option value="box">box</option>
+            <option value="cycle">cycle</option>
+        </select>
+    </div>
+    <div>
+        <label for="points">Speed (between 0 and 10):</label>
+        <input type="range" id="points" name="points" min="0" max="10" ">
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
